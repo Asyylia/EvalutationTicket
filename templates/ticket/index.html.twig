@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ticket index
+{% endblock %}
+
+{% block body %}
+
+<div class="taches">
+	<table class="table">
+		
+			<h1>Liste des tâches</h1>
+			<tbody>
+			
+				{% for ticket in tickets %}
+
+					<tr>
+						<td>{{ ticket.id }}</td>
+						<td><h2>{{ ticket.titre }}</h2></td>
+						<td>{{ ticket.description }}</td>
+						<td>{{ ticket.priority.value }}</td>
+						<td>{{ ticket.status.value }}</td>
+						<td>{{ ticket.createdAt ? ticket.createdAt|date('d-m-Y H:i:s') : '' }}</td>
+						<td>
+							<a aria-label="Voir la tâche" href="{{ path('app_ticket_show', {'id': ticket.id}) }}">Voir</a>
+							{# <a href="{{ path('app_ticket_edit', {'id': ticket.id}) }}">edit</a> #}
+						</td>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="7">Pas de tâches en cours</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+
+	<a aria-label="Créer une nouvelle tâche" href="{{ path('app_ticket_new') }}">Créer une nouvelle tâche</a>
+{% endblock %}

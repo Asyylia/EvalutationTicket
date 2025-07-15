@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Ticket{% endblock %}
+
+{% block body %}
+    <h1>Créer une nouvelle tâche</h1>
+
+    {{ include('ticket/_form.html.twig') }}
+
+    <a aria-label="Retour à la liste" href="{{ path('app_ticket_index') }}">Retour à la liste</a>
+{% endblock %}
