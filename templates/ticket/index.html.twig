@@ -17,8 +17,8 @@
 						<td>{{ ticket.id }}</td>
 						<td><h2>{{ ticket.titre }}</h2></td>
 						<td>{{ ticket.description }}</td>
-						<td>{{ ticket.priority.value }}</td>
-						<td>{{ ticket.status.value }}</td>
+						<td class="{{ ticket.priority.badgeClass}}">{{ ticket.priority.value }}</td>
+						<td class="{{ ticket.status.badgeClass}}">{{ ticket.status.value }}</td>
 						<td>{{ ticket.createdAt ? ticket.createdAt|date('d-m-Y H:i:s') : '' }}</td>
 						<td>
 							<a aria-label="Voir la tâche" href="{{ path('app_ticket_show', {'id': ticket.id}) }}">Voir</a>

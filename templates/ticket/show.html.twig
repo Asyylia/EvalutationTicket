@@ -9,19 +9,19 @@
 
 		<table class="unecarte">
 			<tbody>
-				<tr>
+				<tr class="menu">
 
 					<td>{{ ticket.description }}</td>
 				</tr>
-				{# <tr> #}
+				<tr class="{{ ticket.priority.badgeClass}} menu">
 
-				{# <td>{{ ticket.priority.value }}</td>
+				<td>{{ ticket.priority.value }}</td>
 								</tr>
-								<tr>
+								<tr class="{{ ticket.status.badgeClass}} menu">
 				
 									<td>{{ ticket.status.value }}</td>
-								</tr> #}
-				<tr>
+								</tr>
+				<tr class="menu">
 
 					<td>{{ ticket.createdAt ? ticket.createdAt|date('d-m-Y H:i:s') : '' }}</td>
 				</tr>

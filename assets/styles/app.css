@@ -1,5 +1,9 @@
 body {
     background-color: rgb(173, 161, 223);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .titre{
     display: flex;
@@ -33,7 +37,16 @@ tr{
 }
 tbody{
     display: flex;
+    flex-direction: column;
     gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.menu{
+    border: none;
+    width: 500px;
 }
 
 h2{
@@ -43,6 +56,11 @@ h2{
 .unecarte{
  display: flex;
  justify-content: center;
+}
+
+table.unecarte{
+    display: flex;
+    flex-direction: column !important;
 }
 
 .valider{
@@ -70,4 +88,63 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.carte{
+    border: 3px black dotted;
+    width: 600px;
+}
+
+textarea{
+    height: 50px;
+}
+
+#ticket{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+button.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+}
+
+form{
+     border: 3px black dotted;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+form.btndelete{
+     border: none !important;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.background-high{
+    background-color: rgb(238, 84, 84);
+}
+
+.background-medium{
+    background-color: rgb(212, 123, 51);
+}
+
+.background-low{
+    background-color: rgb(238, 238, 101);
+}
+
+.background-open{
+    background-color: rgb(86, 206, 86);
+}
+
+.background-closed{
+    background-color: rgb(238, 84, 84);
 }
